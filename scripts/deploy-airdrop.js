@@ -1,12 +1,23 @@
 const hre = require("hardhat");
 const ERC20 = require("../ERC20.json");
-
-const ad_address = "0xbF3a965aC8f15b92Af20181101A67f16cAE8a50b";
-const ng_address = "0x6Aae63529DBbeF9347AB2671855B8881898fE731";
+//mumbai
+//const ad_address = "0x5E086c0E963eA27027E2Ecd573f0994Aa22Cf9d3"
+//const usdc_address = "0xaF0dC42725db75AE54f5E8945e71017Bc7ACd27d"; //ng test address
+//mainnet
+const ad_address = "0x60797243339a08958E71ed78A3fDB8f170560B9b";
 const usdc_address = "0x3c499c542cEF5E3811e1192ce70d8cC03d5c3359";
+const ng_address = "0x6Aae63529DBbeF9347AB2671855B8881898fE731";
+
+
 
 async function main() {
-	await balanceOf(usdc_address);
+	//await balanceOf(usdc_address);
+	//await deploy();
+	
+	
+	//await ng_approve_usdc();
+	//await ng_allowance_usdc();
+	await ad_multiSend_usdc();
 }
 
 async function ad_multiSend_usdc() {
@@ -44,16 +55,18 @@ async function balanceOf(token) {
 
 async function ng_approve_usdc() {
 	const [owner] = await ethers.getSigners();
+	console.log(owner.address)
 	const provider = hre.ethers.provider;
-	const usdcCon = new hre.ethers.Contract(usdc_address, ERC20.abi, provider);
-	const tx = await usdcCon.approve(ad_address, '10000000000');
+	const usdcCon = new hre.ethers.Contract(usdc_address, ERC20.abi, owner);
+	const amount = '10000000000';
+	const tx = await usdcCon.approve(ad_address, amount);
 	console.log(tx);
 }
 
 async function ng_allowance_usdc() {
 	const [owner] = await ethers.getSigners();
 	const provider = hre.ethers.provider;
-	const usdcCon = new hre.ethers.Contract(usdc_address, ERC20.abi, provider);
+	const usdcCon = new hre.ethers.Contract(usdc_address, ERC20.abi, owner);
 	const allow = await usdcCon.allowance(owner.address, ad_address);
 	console.log(allow);
 }
