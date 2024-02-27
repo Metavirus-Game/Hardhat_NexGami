@@ -13,7 +13,7 @@ contract NexGamiUSD is ERC20, ERC20Burnable, Ownable, ERC20Permit {
         Ownable(initialOwner)
         ERC20Permit("NexGamiUSD")
     {
-        _mint(msg.sender, 18 * 10 ** decimals());
+        _mint(msg.sender, 1000000000 * 10 ** decimals());
     }
 
     function mint(address to, uint256 amount) public onlyOwner {
