@@ -9,11 +9,11 @@ module.exports = {
   solidity: "0.8.23",
   networks: {
     polygon_mumbai: {
-      url: "https://polygon-mumbai.g.alchemy.com/v2/sMZZy2fxHVbQI-vaJ6nZ7WJ1SzrjblEu",
+      url: "https://polygon-mumbai.g.alchemy.com/v2/6pjG7yevVj4GGc6gRKQ8KUuF3MflD2Tv",
       accounts: [process.env.NG_Deployer_ETH]
     },
     polygon_mainnet: {
-      url: "https://polygon-mainnet.g.alchemy.com/v2/sMZZy2fxHVbQI-vaJ6nZ7WJ1SzrjblEu",
+      url: "https://polygon-mainnet.g.alchemy.com/v2/BzkRYLu6EX2gnAjlTTo4MnTmuQFq1JpY",
       accounts: [process.env.NG_Deployer_ETH]
     }
   },
