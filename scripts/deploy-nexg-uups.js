@@ -14,7 +14,7 @@ async function deploy() {
 
 	const m = await upgrades.deployProxy(nexg, [owner.address], {
 		kind: "uups",
-		initializer: "initialize"
+		initializer: "initialize",
 	});
 	await m.waitForDeployment();
 	//await nexg.waitForDeployment();
