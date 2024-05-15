@@ -9,7 +9,7 @@ module.exports = {
   solidity: "0.8.23",
   networks: {
     polygon_mumbai: {
-      url: "https://polygon-mumbai.g.alchemy.com/v2/"  + process.env.KEY_ALCHEMY_POLYGON_MUMBAI,
+      url: "https://polygon-amoy.g.alchemy.com/v2/"  + process.env.KEY_ALCHEMY_POLYGON_MUMBAI,
       accounts: [process.env.NG_Deployer_ETH]
     },
     polygon_mainnet: {

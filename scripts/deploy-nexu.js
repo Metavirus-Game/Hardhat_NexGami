@@ -6,8 +6,9 @@ async function main() {
 
 async function deploy() {
 	const [owner] = await ethers.getSigners();
+	console.log(`Owner[${owner.address}] Deploy Nexu`)
 	const myth = await hre.ethers.deployContract("NexGamiUSD", [owner.address], {
-		gasPrice:"500000000000"
+		//gasPrice:"500000000000"
 	});
 	await myth.waitForDeployment();
 	console.log(

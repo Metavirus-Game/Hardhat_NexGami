@@ -5,10 +5,14 @@ async function main() {
 }
 
 async function deploy() {
-	const nexg = await hre.ethers.deployContract("NexGami");
+	const [owner] = await ethers.getSigners();
+	console.log(`Owner[${owner.address}] Deploy nexg`)
+	const nexg = await hre.ethers.deployContract("NexGami", [], {
+		//gasPrice:"500000000000"
+	});
 	await nexg.waitForDeployment();
 	console.log(
-		`NexGami deployed to ${nexg.target}`
+		`NEXG deployed to ${nexg.target}`
 	);
 }
 
