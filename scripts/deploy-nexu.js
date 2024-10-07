@@ -1,7 +1,9 @@
 const hre = require("hardhat");
+const { verify } = require("./include/hre_utils");
 
 async function main() {
 	await deploy();
+	// await verifyNEXU();
 }
 
 async function deploy() {
@@ -14,6 +16,13 @@ async function deploy() {
 	console.log(
 		`NEXU deployed to ${myth.target}`
 	);
+}
+
+const token_address = "0xEb75F3952273B97Aa98fe85a3dD447BC34D4B4De";
+
+async function verifyNEXU() {
+	const [owner] = await hre.ethers.getSigners();
+	await verify(token_address, "contracts/NEXU.sol:NexGamiUSD", [owner.address]);
 }
 
 main().catch(e => {

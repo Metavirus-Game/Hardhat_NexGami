@@ -5,8 +5,33 @@
 # 已经部署的代币地址(polygon_amoy)
 - NEXU(permit support)	0x5E086c0E963eA27027E2Ecd573f0994Aa22Cf9d3
 - NEXG(uups)			0x60797243339a08958E71ed78A3fDB8f170560B9b
+- USDT-Test				0xab7c6Db6cfA4D758A8e2e28f372dB43aE316E02A
+- MVT(permit suport)	0x36Ec469229Ee2AdF88FF3CC66d9f66cbD5b7Cb69
 
 # 已经部署的代币的地址(polygon_mainnet)
 - NEXU(permit support)	0xEb75F3952273B97Aa98fe85a3dD447BC34D4B4De	
 - NEXG(uups)			0xaF0dC42725db75AE54f5E8945e71017Bc7ACd27d
 - NEXG(Normal)			0x75E319401d012A97A5f1F254DF44c6D9Af16D3D1
+- MVT(permit support)	0xcd7BCaCc38d71ED14C875d3aBFec5a781812551E
+
+
+# 已部署的airdrop合约地址
+- polygon_mainnet		0x60797243339a08958E71ed78A3fDB8f170560B9b
+- polygon_amoy			0xe31D3f3432CB3715DF2ceA6Db91F0E2b320015aa
+
+# 已部署的TokwnSwap合约地址
+- polygon_amoy 			0x5BB31759ad675b52e8Cd6A481A096a66f20c040C
+- polygon_amoy(Permit)	0x01EaAA0e78156e161ddE27946C6923ddA25E25C5
+- polygon_mainnet		0x2815Ec3083f47f073DE9EB5670CfCbF1BD1709dccd
+
+# 已部署的TokenVesting-NEXG合约地址
+- polygon_amoy			0xdF8167D00f5ca0AFF1FcEb2e6427D2C79e8CEe60
+- polygon_mainnet		0xA85B4D49CB2963f1CEB2A68290B680043aF31089
+
+# 已部署的MetaVirusVIPStake合约地址
+- polygon_amoy			0x0152A624fCE257e90020dBFe603eCF0c542eC769
+- polygon_mainnet 		0xF826529e0A8061d3EDcf64aC9Ce167Ce5Afb1a07
+
+# 已部署的 MetaVirusPet NFT
+- polygon_amoy 			0x42B2C52B5D175b97c0B51AB5aA7DF1b4ebabdECd
+- polygon_mainnet		0x7A390343006F894A01Da02942228EBDB2465E92F

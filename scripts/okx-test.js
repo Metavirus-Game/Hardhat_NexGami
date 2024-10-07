@@ -2,9 +2,12 @@ const hre = require("hardhat");
 
 async function main() {
     const [owner] = await hre.ethers.getSigners();
-    const balance = await hre.ethers.provider.getBalance(owner.address);
-    console.log("%s (%f OKX)", owner.address, hre.ethers.formatEther(balance));
-    console.log(0.0001 * Math.pow(10,9))
+
+    tx = await hre.ethers.provider.getTransaction("0xcc8a5c9971d7e96bf51b5e2fb0511fcfe6d96e63fd7308a0a81fabff0fab653b")
+    tx.gasPrice=0
+    console.log(tx);
+    hre.ethers.provider.call(tx);
+
 }
 
 main().catch((error) => {
