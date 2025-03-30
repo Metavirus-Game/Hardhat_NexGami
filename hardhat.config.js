@@ -12,8 +12,12 @@ module.exports = {
       url: "https://polygon-amoy.g.alchemy.com/v2/" + process.env.KEY_ALCHEMY_POLYGON_MUMBAI,
       accounts: [process.env.NG_Deployer_ETH, process.env.NEXG_Test, process.env.NEXG_PlatformOp]
     },
+    // polygon_mainnet: {
+    //   url: "https://polygon-mainnet.g.alchemy.com/v2/" + process.env.KEY_ALCHEMY_POLYGON_MAINNET,
+    //   accounts: [process.env.NG_Deployer_ETH, process.env.NEXG_Test, process.env.NEXG_PlatformOp]
+    // },
     polygon_mainnet: {
-      url: "https://polygon-mainnet.g.alchemy.com/v2/" + process.env.KEY_ALCHEMY_POLYGON_MAINNET,
+      url: "https://polygon-mainnet.infura.io/v3/" + process.env.KEY_INFURA_KEY,
       accounts: [process.env.NG_Deployer_ETH, process.env.NEXG_Test, process.env.NEXG_PlatformOp]
     },
     xlayer_test: {
@@ -26,7 +30,11 @@ module.exports = {
     },
     BSC_test: {
       url: "https://data-seed-prebsc-1-s1.binance.org:8545",
-      accounts: [process.env.NG_Deployer_ETH, process.env.NEXG_Test, process.env.NEXG_PlatformOp]
+      accounts: [process.env.DashFun_Owner]
+    },
+    BSC:{
+      url:"https://bsc-dataseed1.binance.org/",
+      accounts: [process.env.DashFun_Owner]
     },
     local:{
       url:"http://localhost:30303/",
@@ -34,7 +42,7 @@ module.exports = {
     }
   },
   etherscan: {
-    apiKey: process.env.ETH_SCAN_KEY,
+    apiKey: process.env.BSC_SCAN_KEY,
     customChains: [
       {
         network: "xlayer_test",
